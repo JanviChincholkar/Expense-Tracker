@@ -4,10 +4,13 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
 
-
+import user from './models/User.js'
+import Transaction from './models/Transaction.js';
 const app = express ();
 app.use(express.json());
 app.use(cors());
+
+import { PostSignup, PostLogin } from './controllers/user.js';
 
 
 //connect mongodb
@@ -25,7 +28,10 @@ const connectDB =async ()=>{
     })
  })
 
+ 
+    
 
+   
 
 
 const PORT = process.env.PORT || 5000;
