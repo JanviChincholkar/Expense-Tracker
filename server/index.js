@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 import { PostSignup, PostLogin } from './controllers/user.js';
+import { PostTransaction,  getTransactions } from './controllers/transaction.js';
 
 
 //connect mongodb
@@ -28,8 +29,10 @@ const connectDB =async ()=>{
     })
  })
 
- 
-    
+ app.post("/signup", PostSignup )
+ app.post("/login",PostLogin)
+ app.post("/transaction", PostTransaction)
+ app.get("/transactions",getTransactions )
 
    
 
