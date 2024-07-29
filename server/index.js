@@ -4,6 +4,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import User from './models/User.js';
+import Transaction from './models/Transaction.js';
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -23,6 +26,14 @@ const connectDB = async () =>{
         })
       })
       
+      app.post ("/Signup" , )
+
+
+      app.post("/Login", )
+   
+
+
+
 
 
 const PORT = process.env.PORT || 5000;
