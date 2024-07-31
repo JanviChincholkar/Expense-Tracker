@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-import { postSignup, postLogin } from './controllers/user.js';
+import { PostSignup,PostLogin } from './controllers/user.js';
 
 import { postTransaction, getTransactions, deleteTransaction } from "./controllers/transaction.js";
 
@@ -31,9 +31,8 @@ const connectDB = async () =>{
         })
       })
       
-      app.post("/signup", postSignup)
-      app.post("/login", postLogin)
-      
+      app.post("/signup", PostSignup )
+app.post("/login",PostLogin)
       app.post("/transaction", postTransaction)
       app.get("/transactions", getTransactions)
 

@@ -1,0 +1,15 @@
+.signup-form{
+    width: 300px;
+    border :  9px double #0084ff;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.signup-heading{
+    text-align: center;
+    font-size: 20pz;
+color: #0084ff;
+}
