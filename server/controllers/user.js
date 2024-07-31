@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-const PostSignup = async (req, res) => {
+const postSignup = async (req, res) => {
   const { fullName, email, password, dob } = req.body;
 
   const user = new User({
@@ -28,7 +28,7 @@ const PostSignup = async (req, res) => {
   }
 }
 
-const PostLogin = async (req, res) => {
+const postLogin = async (req, res) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({
@@ -52,4 +52,4 @@ const PostLogin = async (req, res) => {
   }
 }
 
-export {PostSignup,PostLogin}
+export {postSignup,postLogin}
